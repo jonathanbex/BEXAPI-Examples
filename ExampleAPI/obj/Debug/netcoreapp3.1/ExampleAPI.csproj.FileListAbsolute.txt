@@ -1,0 +1,4 @@
+D:\Bex\BexAPIExample\ExampleAPI\ExampleAPI\bin\Debug\netcoreapp3.1\ExampleAPI.exe
+D:\Bex\BexAPIExample\ExampleAPI\ExampleAPI\obj\Debug\netcoreapp3.1\ExampleAPI.csprojAssemblyReference.cache
+D:\Bex\BexAPIExample\ExampleAPI\ExampleAPI\obj\Debug\netcoreapp3.1\ExampleAPI.AssemblyInfoInputs.cache
+D:\Bex\BexAPIExample\ExampleAPI\ExampleAPI\obj\Debug\netcoreapp3.1\ExampleAPI.AssemblyInfo.cs

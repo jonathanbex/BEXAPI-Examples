@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PKxrrqNKOMzZfudd2+OHDc9D//BDUETVFoObpCKCzPoaRYzasdKQTyRQoZGf3iv5sdQrg9xIrzvkKJW5K5I/0g==",
+  "success": true,
+  "projectFilePath": "D:\\Bex\\BexAPIExample\\ExampleAPI\\ExampleAPI\\ExampleAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jonat\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
