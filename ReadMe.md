@@ -11,5 +11,7 @@ This example contains both how to setup a http request to our api and the fetch 
 
 # API Methods in Example
 <a href="https://bexapi.developer.azure-api.net/api-details#api=bex-api&operation=WarehouseManagement_GetQueuedStockChanges">GetQueuedStockChanges</a>
+<br/>
 <a href="https://bexapi.developer.azure-api.net/api-details#api=bex-api&operation=WarehouseManagement_GetStockinformation">GetStockinformation</a>
-<a href ="https://bexapi.developer.azure-api.net/api-details#api=bex-api&operation=WarehouseManagement_ConfirmStockChange">ConfirmStockChange</a>
+<br/>
+<a href="https://bexapi.developer.azure-api.net/api-details#api=bex-api&operation=WarehouseManagement_ConfirmStockChange">ConfirmStockChange</a>
