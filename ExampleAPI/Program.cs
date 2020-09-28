@@ -22,13 +22,13 @@ namespace ExampleAPI
       var secret = "";
 
       //Choose location to query from
-      //Either use a fixed value or choose one from the method https://developer.bexonline.com//api-details#api=bex-api&operation=WarehouseManagement_GetLocations
+      //Either use a fixed value or choose one from the method https://developer.bexonline.com/api-details#api=bex-api&operation=WarehouseManagement_GetLocations
       var location = "";
 
       var apiConnection = new ApiConnection();
 
       //First request, Get queued stock entries
-      //https://developer.bexonline.com//api-details#api=bex-api&operation=WarehouseManagement_GetQueuedStockChanges
+      //https://developer.bexonline.com/api-details#api=bex-api&operation=WarehouseManagement_GetQueuedStockChanges
       var stockchangesUrl = baseUrl + "WarehouseManagement/GetQueuedStockChanges";
       //Setup request
       var stockChangesRequest = await apiConnection.CreateConnection(stockchangesUrl, WebRequestMethods.Http.Get, apiKey, secret);
@@ -42,7 +42,7 @@ namespace ExampleAPI
       foreach (var stockEntry in stockChangesResponse.stockChangeEntries)
       {
         //Make request per product to get stock
-        //https://developer.bexonline.com//api-details#api=bex-api&operation=WarehouseManagement_GetStockinformation
+        //https://developer.bexonline.com/api-details#api=bex-api&operation=WarehouseManagement_GetStockinformation
         var getStockInformationUrl = string.Format("WarehouseManagement/GetStockinformation?locationCode={0}&productIdentifier={1}", new[] { location, stockEntry.productIdentifier });
         var getStockInformationRequest = await apiConnection.CreateConnection(getStockInformationUrl, WebRequestMethods.Http.Get, apiKey, secret);
         var getStockInformationResponse = await apiConnection.MakeRequest<ProductStock>(getStockInformationRequest);
@@ -53,7 +53,7 @@ namespace ExampleAPI
         }
 
         //Send Confirmation To BeX that stock has been received
-        //https://developer.bexonline.com//api-details#api=bex-api&operation=WarehouseManagement_ConfirmStockChange
+        //https://developer.bexonline.com/api-details#api=bex-api&operation=WarehouseManagement_ConfirmStockChange
         var confirmStockUrl = "WarehouseManagement/ConfirmStockChange";
         var jsonString = JsonConvert.SerializeObject(new { entryId = stockEntry.id });
         var confirmStockRequest = await apiConnection.CreateConnection(confirmStockUrl, WebRequestMethods.Http.Put, apiKey, secret);
